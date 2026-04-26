@@ -14,4 +14,9 @@ public class Principal {
     public String home2(){
         return "Hello World 2";
     }
+
+    @GetMapping("/api3")
+    public String home3(){
+        return "Hello World 3";
+    }
 }
