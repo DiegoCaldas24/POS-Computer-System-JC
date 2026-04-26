@@ -9,4 +9,9 @@ public class Principal {
     public String home(){
         return "Hello World";
     }
+
+    @GetMapping("/api2")
+    public String home2(){
+        return "Hello World 2";
+    }
 }
