@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 // --- Inline SVG Icons ---
 const Icons = {
@@ -223,14 +224,13 @@ const Icons = {
 export default function Navbar() {
 
   return (
-     <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm py-5">
+     <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm py-3">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center cursor-pointer">
-          <div className="bg-sky-500 p-1.5 rounded-lg mr-2 shadow-lg shadow-sky-100">
-            <span className="text-white scale-90 block"></span>
-          </div>
-          <span className="text-xl font-black text-slate-800 tracking-tighter italic">TECH<span className="text-sky-500">PRO</span></span>
+        <div className="flex items-center pl-10 cursor-pointer">
+          <Link to="/" className="w-20 h-auto">
+            <img src={logo} alt="logo-empresa" />
+          </Link>
         </div>
 
         {/* Enlaces de Navegación horizontales con Tailwind directo */}
