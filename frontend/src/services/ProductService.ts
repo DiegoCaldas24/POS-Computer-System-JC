@@ -1,23 +1,12 @@
-import {supabase} from '../utils/supabase';
+import { supabase } from "../utils/supabase";
 
 export async function getAllProducts() {
-    //Obtiene todos los productos de la tabla 'products' en Supabase
-    const {data, error} = await supabase.from('products').select('*');
-    //Si hay un error al obtener los productos, se lanza una excepción con el mensaje de error
-    if (error) {  
-        throw error;
-    }
-    //Si no hay errores, se devuelve la lista de productos obtenida de la base de datos
-    return data;
-}
-
-export async function getProductById(id: number) {
-    //Obtiene un producto específico de la tabla 'products' en Supabase utilizando su ID
-    const {data, error} = await supabase.from('products').select('*').eq('id', id).single();
-    //Si hay un error al obtener el producto, se lanza una excepción con el mensaje de error
-    if (error) {
-        throw error;
-    }
-    //Si no hay errores, se devuelve el producto obtenido de la base de datos
-    return data;
+  //Obtiene todos los productos de la tabla 'products' en Supabase
+  const { data, error } = await supabase.from("products").select("*");
+  //Si hay un error al obtener los productos, se lanza una excepción con el mensaje de error
+  if (error) {
+    throw error;
+  }
+  //Si no hay errores, se devuelve la lista de productos obtenida de la base de datos
+  return data;
 }

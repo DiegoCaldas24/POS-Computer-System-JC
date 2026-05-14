@@ -3,13 +3,12 @@ import { Icons } from "../../../components/Icons";
 
 export function ProductCard() {
   const products = useProducts();
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       {products.map((product) => (
         <div
-          key={product.id}
-          className="bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:border-sky-200 transition-all group shadow-sm hover:shadow-xl"
+          key={product.product_id}
+          className="bg-white rounded-4xl overflow-hidden border border-slate-100 hover:border-sky-200 transition-all group shadow-sm hover:shadow-xl"
         >
           <div className="relative h-64 overflow-hidden p-4 flex items-center justify-center">
             <img
