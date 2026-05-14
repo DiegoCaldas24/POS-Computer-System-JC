@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import {Icons} from "../components/Icons"
 
-export default function HomePage (){
+export  function HomePage (){
     return (
         <div className="animate-in fade-in duration-700">
             <section className="relative pt-25 pb-24 px-4 overflow-hidden bg-gradient-to-b from-sky-50 to-white">
