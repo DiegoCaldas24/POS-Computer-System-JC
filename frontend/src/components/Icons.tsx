@@ -1,5 +1,118 @@
 // --- Inline SVG Icons ---
 export const Icons = {
+  RepairLogo: () => (
+    <svg
+      width={120}
+      height={120}
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Pantalla */}
+      <rect
+        x="20"
+        y="15"
+        width="80"
+        height="55"
+        rx="4"
+        stroke="#2563EB"
+        strokeWidth="4"
+        fill="white"
+      />
+
+      {/* Base laptop */}
+      <path d="M10 82H110L100 98H20L10 82Z" fill="#2563EB" />
+
+      {/* Líneas teclado */}
+      <line x1="30" y1="88" x2="90" y2="88" stroke="white" strokeWidth="2" />
+
+      <line x1="35" y1="93" x2="85" y2="93" stroke="white" strokeWidth="2" />
+
+      {/* Engranaje grande */}
+      <g transform="translate(48 43)">
+        <circle cx="0" cy="0" r="12" fill="#6B7280" />
+
+        <circle cx="0" cy="0" r="5" fill="white" />
+
+        {[...Array(8)].map((_, i) => {
+          const angle = (i * 45 * Math.PI) / 180;
+
+          const x = Math.cos(angle) * 15;
+          const y = Math.sin(angle) * 15;
+
+          return (
+            <rect
+              key={i}
+              x={x - 1.5}
+              y={y - 4}
+              width="3"
+              height="8"
+              rx="1"
+              fill="#6B7280"
+              transform={`rotate(${i * 45} ${x} ${y})`}
+            />
+          );
+        })}
+      </g>
+
+      {/* Engranaje pequeño */}
+      <g transform="translate(68 53)">
+        <circle cx="0" cy="0" r="8" fill="#4B5563" />
+
+        <circle cx="0" cy="0" r="3" fill="white" />
+
+        {[...Array(8)].map((_, i) => {
+          const angle = (i * 45 * Math.PI) / 180;
+
+          const x = Math.cos(angle) * 11;
+          const y = Math.sin(angle) * 11;
+
+          return (
+            <rect
+              key={i}
+              x={x - 1}
+              y={y - 3}
+              width="2"
+              height="6"
+              rx="1"
+              fill="#4B5563"
+              transform={`rotate(${i * 45} ${x} ${y})`}
+            />
+          );
+        })}
+      </g>
+    </svg>
+  ),
+  User: () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+  ),
+  Bell: () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+      <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+    </svg>
+  ),
   Cpu: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -213,6 +326,21 @@ export const Icons = {
     >
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16 14" />
+    </svg>
+  ),
+  Settings: () => (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+      <circle cx="12" cy="12" r="3" />
     </svg>
   ),
 };

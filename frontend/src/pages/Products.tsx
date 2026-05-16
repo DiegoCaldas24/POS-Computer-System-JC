@@ -9,9 +9,6 @@ export function ProductsPage() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-8">
           <div>
-            <h1 className="text-5xl font-black text-slate-900 mb-4 tracking-tight italic">
-              CATÁLOGO <span className="text-sky-500">PRO</span>
-            </h1>
             <p className="text-slate-500 text-lg">
               Lo mejor en hardware seleccionado por expertos.
             </p>
@@ -23,14 +20,14 @@ export function ProductsPage() {
             {/* Category card */}
             <CategoryCard />
           </div>
-          <div className="relative group">
+          <div className="relative group pt-2">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
               <Icons.Search />
             </span>
             <input
               type="text"
               placeholder="Buscar modelos..."
-              className="bg-white border border-slate-200 rounded-2xl pl-12 pr-6 py-4 text-slate-700 w-full md:w-80 shadow-sm focus:ring-2 focus:ring-sky-500 outline-none transition-all"
+              className="bg-white border border-slate-200 rounded-2xl pl-12 pr-6 py-4 text-slate-700 h-12 w-full md:w-80 shadow-sm focus:ring-2 focus:ring-sky-500 outline-none transition-all"
             />
           </div>
         </div>

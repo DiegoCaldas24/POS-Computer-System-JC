@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import {Icons} from "./Icons"
+import { Icons } from "./Icons";
 
 export default function Footer() {
   return (

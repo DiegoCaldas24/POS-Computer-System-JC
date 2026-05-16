@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import {Icons} from "./Icons"
+import { Icons } from "./Icons";
 
 export default function Navbar() {
-
   return (
-     <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm py-3">
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm py-3">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center pl-10 cursor-pointer">
           <Link to="/" className="w-20 h-auto">
-            <img src={logo} alt="logo-empresa" />
+            <img src={logo} alt="TechPro Solutions" />
           </Link>
         </div>
 
@@ -20,16 +19,16 @@ export default function Navbar() {
             to="/"
             className="text-xs uppercase font-black tracking-widest transition-all duration-300"
           >
-            home
+            inicio
           </Link>
-          <Link 
-            to="/products" 
+          <Link
+            to="/products"
             className="text-xs uppercase font-black tracking-widest transition-all duration-300"
           >
-            products
+            productos
           </Link>
-          <Link 
-            to="/repairs" 
+          <Link
+            to="/repairs"
             className="text-xs uppercase font-black tracking-widest transition-all duration-300"
           >
             reparaciones
@@ -43,4 +42,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-};
+}
